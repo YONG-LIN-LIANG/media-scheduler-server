@@ -1,10 +1,14 @@
 from flask import Flask, request, jsonify
-
 app = Flask(__name__)
 
 @app.route("/")
 def home():
   return "Home"
+
+# @app.route("/notion-db", methods=["GET", "POST"])
+# def notion_db:
+#   if(request.method == "GET"):
+    
 
 @app.route("/get-user/<user_id>")
 def get_user(user_id):
@@ -27,3 +31,5 @@ def create_user():
 
 if __name__ == "__main__":
   app.run(debug=True)
+  print("server is running!")
+  scheduler.run()
